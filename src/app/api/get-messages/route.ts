@@ -51,7 +51,7 @@ export async function GET(request:Request){
             status:200
         })
     } catch (error) {
-        console.log("Error while fetching messages",error)
+        console.log("An unexpected error occured: ",error)
         return Response.json({
             success:false,
             message:"Error while fetching messages"

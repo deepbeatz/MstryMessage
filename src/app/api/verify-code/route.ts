@@ -9,7 +9,7 @@ export async function POST(request:Request){
         const {username,code} = await request.json()
         const decodedUsername = decodeURIComponent(username)
         //generally when we get stuff from the request url instead of request body we decode it using this above function to get the un-encoded version of the encoded component of the uri
-        //there was no need of this function here though cuz we using the request body, but still hitesh sir did it just to show such a function exists
+        //here the username that comes from the frontend api call was extraxted from the params so its good to use this function here
 
         //now, getting the user first for it to get verified
         const user = await UserModel.findOne({username:decodedUsername})
