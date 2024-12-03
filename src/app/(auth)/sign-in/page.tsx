@@ -48,7 +48,7 @@ const page = () => {
     if(result?.error){
       toast({
         title:"Login failed",
-        description:"Incorrect username or password",
+        description:result.error,
         variant:"destructive"
       })
       setIsSubmitting(false)

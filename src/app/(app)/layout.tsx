@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Toaster } from "@/components/ui/toaster";
-import AuthProvider from "@/context/AuthProvider";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
@@ -16,15 +14,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <AuthProvider>
       <body
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* <Navbar/> */}
+        <Navbar/>
         {children}
-        <Toaster/>
       </body>
-      </AuthProvider>
     </html>
   );
 }
